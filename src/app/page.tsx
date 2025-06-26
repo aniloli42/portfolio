@@ -7,8 +7,7 @@ import Projects from '@/components/projects'
 import Skills from '@/components/skills'
 
 export default function Home() {
-  const anil = 'Anil'
-  console.log('Hello, ' + anil + '! Welcome to your portfolio.')
+  console.log('hi')
   return (
     <>
       <Hero />
