@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+body {
+  @apply dark:bg-slate-950 dark:text-white;
+}
