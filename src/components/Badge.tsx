@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge'
 
 type LinkBadge = {
 	link?: string
+	download?: string
 }
 
 type Props =
@@ -21,6 +22,7 @@ const Badge = ({ className, ...props }: Props) => {
 				href={props.link}
 				target="_blank"
 				className={twMerge(BADGE_CLASSNAMES, className)}
+				download={props?.download}
 				{...props}
 			>
 				{props.children}
