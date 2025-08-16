@@ -3,7 +3,7 @@ import NavItem from './NavItem'
 const NavBar = ({}) => {
   return (
     <nav
-      className="flex flex-col lg:flex-row lg:gap-4 gap-2"
+      className="flex flex-col lg:flex-row lg:gap-8 gap-4"
       aria-label="Navigation menu"
     >
       <NavItem>Home</NavItem>
