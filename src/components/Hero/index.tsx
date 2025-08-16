@@ -28,7 +28,8 @@ const Hero = () => {
           {/* Action Buttons */}
           <div className="mt-4 flex gap-4">
             <Link
-              href="/"
+              href="/anil-oli-resume.pdf"
+              download={'anil-oli-resume.pdf'}
               className="flex cursor-pointer items-center gap-2 rounded bg-sky-500 px-6 py-2 text-white transition-colors focus-within:bg-sky-600 hover:bg-sky-600 dark:focus-within:bg-sky-700 dark:hover:bg-sky-700"
             >
               <BiDownload className="text-xl" />
