@@ -27,22 +27,30 @@ const Hero = () => {
 
           {/* Action Buttons */}
           <div className="mt-4 flex gap-4">
-            <button className="flex items-center gap-2 rounded bg-sky-500 px-6 py-2 text-white">
+            <Link
+              href="/"
+              className="flex cursor-pointer items-center gap-2 rounded bg-sky-500 px-6 py-2 text-white transition-colors focus-within:bg-sky-600 hover:bg-sky-600 dark:focus-within:bg-sky-700 dark:hover:bg-sky-700"
+            >
               <BiDownload className="text-xl" />
               Get Resume
-            </button>
+            </Link>
 
-            <button className="flex items-center gap-2 rounded border border-gray-600 px-6 py-2 text-white">
+            <Link
+              href="mailto:aniloli42@gmail.com"
+              className="flex cursor-pointer items-center gap-2 rounded border border-gray-600 px-6 py-2 text-white transition-colors focus-within:bg-gray-800 hover:bg-gray-800 dark:border-gray-400 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
+            >
               <BiMailSend className="text-xl" />
               Send Email
-            </button>
+            </Link>
           </div>
 
           {/*Social Media Links  */}
           <div className="mt-8 flex gap-2">
             <Link
               href="https://github.com/aniloli42"
+              className="rounded p-2 focus-within:bg-gray-200 hover:bg-gray-200 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
               target="_blank"
+              aria-label="Github Profile Link"
               rel="noopener noreferrer"
             >
               <BsGithub className="text-2xl" />
@@ -50,9 +58,10 @@ const Hero = () => {
 
             <Link
               href="https://www.linkedin.com/in/aniloli"
+              className="rounded p-2 focus-within:bg-gray-200 hover:bg-gray-200 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4"
+              aria-label="LinkedIn Profile Link"
             >
               <BsLinkedin className="text-2xl" />
             </Link>
