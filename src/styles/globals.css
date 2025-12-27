@@ -1,5 +1,38 @@
 @import 'tailwindcss';
 
 body {
-  @apply dark:bg-slate-950 dark:text-white;
+  @apply bg-white text-gray-900;
 }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar - only show when scrolling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(59 130 246) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-600;
+}
+

@@ -1,44 +1,65 @@
+'use client'
+
 import Header from '../ui/Header'
 import { BiDownload, BiMailSend } from 'react-icons/bi'
 import Container from '../ui/Container'
-import MY_PORTRAIT_IMAGE from '@/assets/anil-oli-portrait.jpg'
+import MY_PORTRAIT_IMAGE from '@/assets/anil_oli_portrait_photo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { PersonalInfo } from '@/types/portfolio.types'
 
-const Hero = () => {
+interface HeroProps {
+  data: PersonalInfo
+}
+
+const Hero = ({ data }: HeroProps) => {
+  const getSocialIcon = (platform: string) => {
+    switch (platform.toLowerCase()) {
+      case 'github':
+        return <BsGithub className="text-2xl" />
+      case 'linkedin':
+        return <BsLinkedin className="text-2xl" />
+      default:
+        return null
+    }
+  }
+
   return (
-    <div className="flex h-screen min-h-dvh flex-col">
+    <div className="flex h-screen min-h-dvh flex-col bg-white dark:bg-gray-800">
       <Header />
 
       {/* CTA */}
       <Container className="flex flex-1 flex-col items-center gap-2 py-4 md:flex-row md:place-content-between">
         <div className="flex flex-col gap-2">
-          <p className="text-lg text-gray-400">Hello, I&apos;m</p>
-          <p className="text-4xl font-bold text-sky-500 md:text-6xl">
-            Anil Oli
+          <p className="text-lg text-gray-500 dark:text-gray-400">
+            Hello, I&apos;m
           </p>
-          <p className="text-2xl font-light">Software Engineer</p>
-          <p className="max-w-[45ch] text-lg text-gray-400">
-            Passionate full-stack developer specializing in modern web
-            technologies, automation, and creating scalable solutions that make
-            a difference.
+          <p className="text-4xl font-bold text-gray-900 md:text-6xl dark:text-white">
+            {data.name}
+          </p>
+          <p className="text-2xl font-light text-gray-600 dark:text-gray-400">
+            {data.title}
+          </p>
+          <p className="max-w-[45ch] text-lg text-gray-600 dark:text-gray-400">
+            {data.bio}
           </p>
 
           {/* Action Buttons */}
           <div className="mt-4 flex gap-4">
             <Link
               href="/anil-oli-resume.pdf"
-              download={'anil-oli-resume.pdf'}
-              className="flex cursor-pointer items-center gap-2 rounded bg-sky-500 px-6 py-2 text-white transition-colors focus-within:bg-sky-600 hover:bg-sky-600 dark:focus-within:bg-sky-700 dark:hover:bg-sky-700"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex cursor-pointer items-center gap-2 rounded bg-blue-600 px-6 py-2 text-white transition-all duration-200 hover:bg-blue-700"
             >
               <BiDownload className="text-xl" />
               Get Resume
             </Link>
 
             <Link
-              href="mailto:aniloli42@gmail.com"
-              className="flex cursor-pointer items-center gap-2 rounded border border-gray-600 px-6 py-2 text-white transition-colors focus-within:bg-gray-800 hover:bg-gray-800 dark:border-gray-400 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
+              href={`mailto:${data.email}`}
+              className="flex cursor-pointer items-center gap-2 rounded border border-gray-300 px-6 py-2 text-gray-700 transition-all duration-200 hover:bg-gray-100 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800"
             >
               <BiMailSend className="text-xl" />
               Send Email
@@ -47,25 +68,18 @@ const Hero = () => {
 
           {/*Social Media Links  */}
           <div className="mt-8 flex gap-2">
-            <Link
-              href="https://github.com/aniloli42"
-              className="rounded p-2 focus-within:bg-gray-200 hover:bg-gray-200 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
-              target="_blank"
-              aria-label="Github Profile Link"
-              rel="noopener noreferrer"
-            >
-              <BsGithub className="text-2xl" />
-            </Link>
-
-            <Link
-              href="https://www.linkedin.com/in/aniloli"
-              className="rounded p-2 focus-within:bg-gray-200 hover:bg-gray-200 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile Link"
-            >
-              <BsLinkedin className="text-2xl" />
-            </Link>
+            {data.socials.map((social) => (
+              <Link
+                key={social.platform}
+                href={social.url}
+                className="rounded p-2 text-gray-700 transition-all duration-200 focus-within:bg-gray-200 hover:bg-gray-200 dark:text-gray-300 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
+                target="_blank"
+                aria-label={`${social.platform} Profile Link`}
+                rel="noopener noreferrer"
+              >
+                {getSocialIcon(social.platform)}
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -73,7 +87,7 @@ const Hero = () => {
         <div>
           <Image
             src={MY_PORTRAIT_IMAGE}
-            alt="Anil Oli Portrait"
+            alt={`${data.name} Portrait`}
             priority
             className="h-72 w-72 rounded-xl object-cover"
           />
