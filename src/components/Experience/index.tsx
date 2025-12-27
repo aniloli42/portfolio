@@ -29,7 +29,7 @@ const Experience = ({ experiences }: ExperienceProps) => {
                 className="relative border-l-2 border-blue-200 pl-8 dark:border-blue-800"
               >
                 {/* Timeline dot */}
-                <div className="absolute top-0 -left-[9px] h-4 w-4 rounded-full bg-blue-600 dark:bg-blue-400" />
+                <div className="absolute top-0 -left-2.25 h-4 w-4 rounded-full bg-blue-600 dark:bg-blue-400" />
 
                 {/* Content */}
                 <div className="rounded-lg bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl dark:bg-gray-800">
