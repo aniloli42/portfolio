@@ -21,7 +21,7 @@ const NavBar = ({
         }`}
         aria-label="Mobile navigation menu"
       >
-        <div className="flex flex-col gap-4 p-4">
+        <div className="flex flex-col items-center gap-4 p-4">
           <NavItem href="#home" onClick={onItemClick}>
             Home
           </NavItem>
