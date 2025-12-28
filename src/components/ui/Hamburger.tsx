@@ -12,7 +12,7 @@ const HamBurger = ({ isOpen, onClick }: HamBurgerProps) => {
   return (
     <button
       onClick={onClick}
-      className="rounded p-2 text-gray-300 transition-colors hover:bg-gray-700 md:hidden"
+      className="rounded p-2 text-gray-300 transition-colors hover:bg-gray-700 lg:hidden"
       aria-label="Toggle menu"
       aria-expanded={isOpen}
     >
