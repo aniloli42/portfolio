@@ -1,7 +1,7 @@
 'use client'
 
 import Header from '../ui/Header'
-import { BiDownload, BiMailSend } from 'react-icons/bi'
+import { BiDownload } from 'react-icons/bi'
 import Container from '../ui/Container'
 import MY_PORTRAIT_IMAGE from '@/assets/anil_oli_portrait_photo.png'
 import Image from 'next/image'
@@ -53,14 +53,6 @@ const Hero = ({ data }: HeroProps) => {
             >
               <BiDownload className="text-xl" />
               Get Resume
-            </Link>
-
-            <Link
-              href={`mailto:${data.email}`}
-              className="flex cursor-pointer items-center gap-2 rounded border border-gray-300 px-6 py-2 text-gray-700 transition-all duration-200 hover:bg-gray-100 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800"
-            >
-              <BiMailSend className="text-xl" />
-              Send Email
             </Link>
           </div>
 
