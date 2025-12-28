@@ -1,15 +1,15 @@
 import NavItem from './NavItem'
 
 interface NavBarProps {
-  isMobileMenuOpen?: boolean;
+  isMobileMenuOpen?: boolean
 }
 
 const NavBar = ({ isMobileMenuOpen = false }: NavBarProps) => {
   return (
     <nav
       className={`${
-        isMobileMenuOpen 
-          ? 'flex flex-col absolute top-full left-0 right-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 gap-4 shadow-lg' 
+        isMobileMenuOpen
+          ? 'absolute top-full right-0 left-0 flex flex-col gap-4 border-b border-gray-700 bg-gray-800 p-4 shadow-lg'
           : 'hidden lg:flex lg:flex-row lg:gap-8'
       }`}
       aria-label="Navigation menu"

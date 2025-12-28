@@ -24,24 +24,18 @@ const Hero = ({ data }: HeroProps) => {
   }
 
   return (
-    <div className="flex h-screen min-h-dvh flex-col bg-white dark:bg-gray-800">
+    <div className="flex h-screen min-h-dvh flex-col bg-gray-800">
       <Header />
 
       {/* CTA */}
       <Container className="flex flex-1 flex-col items-center gap-2 py-4 md:flex-row md:place-content-between">
         <div className="flex flex-col gap-2">
-          <p className="text-lg text-gray-500 dark:text-gray-400">
-            Hello, I&apos;m
-          </p>
-          <p className="text-4xl font-bold text-gray-900 md:text-6xl dark:text-white">
+          <p className="text-lg text-gray-400">Hello, I&apos;m</p>
+          <p className="text-4xl font-bold text-white md:text-6xl">
             {data.name}
           </p>
-          <p className="text-2xl font-light text-gray-600 dark:text-gray-400">
-            {data.title}
-          </p>
-          <p className="max-w-[45ch] text-lg text-gray-600 dark:text-gray-400">
-            {data.bio}
-          </p>
+          <p className="text-2xl font-light text-gray-400">{data.title}</p>
+          <p className="max-w-[45ch] text-lg text-gray-400">{data.bio}</p>
 
           {/* Action Buttons */}
           <div className="mt-4 flex gap-4">
@@ -62,7 +56,7 @@ const Hero = ({ data }: HeroProps) => {
               <Link
                 key={social.platform}
                 href={social.url}
-                className="rounded p-2 text-gray-700 transition-all duration-200 focus-within:bg-gray-200 hover:bg-gray-200 dark:text-gray-300 dark:focus-within:bg-gray-700 dark:hover:bg-gray-700"
+                className="rounded p-2 text-gray-300 transition-all duration-200 focus-within:bg-gray-700 hover:bg-gray-700"
                 target="_blank"
                 aria-label={`${social.platform} Profile Link`}
                 rel="noopener noreferrer"
