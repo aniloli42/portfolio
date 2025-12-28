@@ -20,8 +20,6 @@ const Hero = ({ data }: HeroProps) => {
         return <BsGithub className="text-2xl" />
       case 'linkedin':
         return <BsLinkedin className="text-2xl" />
-      default:
-        return null
     }
   }
 

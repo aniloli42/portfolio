@@ -16,10 +16,6 @@ export const portfolioData: PortfolioData = {
       {
         platform: 'LinkedIn',
         url: 'https://linkedin.com/in/aniloli'
-      },
-      {
-        platform: 'Website',
-        url: 'https://aniloli42.me'
       }
     ]
   },
