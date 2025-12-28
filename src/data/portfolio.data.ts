@@ -95,11 +95,7 @@ export const portfolioData: PortfolioData = {
       ],
       repositoryUrl:
         'https://github.com/aniloli42/ctevt-notice-to-facebook-post-automation',
-      highlights: [
-        'Designed a robust web scraping mechanism using Puppeteer.js, ensuring 100% accuracy in retrieving notices and eliminating delays caused by manual monitoring.',
-        'Architected a backend solution using Node.js and Express.js, integrated with MongoDB, to efficiently track, compare, and store over 1,000 notices.',
-        'Implemented an automated content distribution pipeline via the Facebook Graph API, reducing posting latency by 80% and enhancing operational efficiency.'
-      ]
+      liveUrl: 'https://noticeapi.aniloli42.me'
     },
     {
       title: 'Donate – Blood Management System',
@@ -115,12 +111,7 @@ export const portfolioData: PortfolioData = {
       ],
       repositoryUrl:
         'https://github.com/aniloli42/donate-blood-management-mern',
-      highlights: [
-        'Implemented authentication, authorization, and state management using Redux to ensure a seamless user experience.',
-        'Designed and optimized database schemas in MongoDB for efficient donor-recipient matching.',
-        'Integrated form validation and user-friendly UI components to enhance accessibility and usability.',
-        'Gained hands-on experience with RESTful APIs, CRUD operations, and secure user authentication flows.'
-      ]
+      liveUrl: 'https://donate.aniloli42.me'
     }
   ],
 
