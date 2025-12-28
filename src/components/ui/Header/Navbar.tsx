@@ -2,17 +2,62 @@ import NavItem from './NavItem'
 
 interface NavBarProps {
   isMobileMenuOpen?: boolean
+  onItemClick?: () => void
+  mobile?: boolean
 }
 
-const NavBar = ({ isMobileMenuOpen = false }: NavBarProps) => {
+const NavBar = ({
+  isMobileMenuOpen = false,
+  onItemClick,
+  mobile = false
+}: NavBarProps) => {
+  if (mobile) {
+    return (
+      <nav
+        className={`absolute top-full right-0 left-0 overflow-hidden border-gray-700 bg-gray-800 shadow-lg transition-all duration-300 ease-in-out lg:hidden ${
+          isMobileMenuOpen
+            ? 'max-h-125 border-b opacity-100'
+            : 'max-h-0 opacity-0'
+        }`}
+        aria-label="Mobile navigation menu"
+      >
+        <div className="flex flex-col gap-4 p-4">
+          <NavItem href="#home" onClick={onItemClick}>
+            Home
+          </NavItem>
+          <NavItem href="#about" onClick={onItemClick}>
+            About
+          </NavItem>
+          <NavItem href="#experience" onClick={onItemClick}>
+            Experience
+          </NavItem>
+          <NavItem href="#education" onClick={onItemClick}>
+            Education
+          </NavItem>
+          <NavItem href="#skills" onClick={onItemClick}>
+            Skills
+          </NavItem>
+          <NavItem href="#projects" onClick={onItemClick}>
+            Projects
+          </NavItem>
+          <NavItem href="#awards" onClick={onItemClick}>
+            Recognition
+          </NavItem>
+          <NavItem href="#community" onClick={onItemClick}>
+            Community
+          </NavItem>
+          <NavItem href="#contact" onClick={onItemClick}>
+            Contact
+          </NavItem>
+        </div>
+      </nav>
+    )
+  }
+
   return (
     <nav
-      className={`${
-        isMobileMenuOpen
-          ? 'absolute top-full right-0 left-0 flex flex-col gap-4 border-b border-gray-700 bg-gray-800 p-4 shadow-lg'
-          : 'hidden lg:flex lg:flex-row lg:gap-8'
-      }`}
-      aria-label="Navigation menu"
+      className="hidden lg:flex lg:flex-row lg:gap-8"
+      aria-label="Desktop navigation menu"
     >
       <NavItem href="#home">Home</NavItem>
       <NavItem href="#about">About</NavItem>
