@@ -45,7 +45,6 @@ export interface Project {
   technologies: string[]
   repositoryUrl?: string
   liveUrl?: string
-  highlights: string[]
 }
 
 export interface Award {
