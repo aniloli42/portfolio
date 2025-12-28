@@ -25,10 +25,10 @@ const Projects = ({ projects }: ProjectsProps) => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl border border-gray-700 bg-gradient-to-br from-gray-800 to-gray-900 p-6 transition-all duration-300 hover:border-blue-400 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-xl border border-gray-700 bg-linear-to-br from-gray-800 to-gray-900 p-6 transition-all duration-300 hover:border-blue-400 hover:shadow-2xl"
               >
                 {/* Accent line */}
-                <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full" />
+                <div className="absolute top-0 left-0 h-1 w-0 bg-linear-to-br from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full" />
 
                 {/* Project Header */}
                 <div className="mb-4">
