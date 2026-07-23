@@ -10,7 +10,6 @@ export interface PersonalInfo {
   bio: string
   location: string
   email: string
-  phone: string
   socials: SocialLink[]
 }
 
