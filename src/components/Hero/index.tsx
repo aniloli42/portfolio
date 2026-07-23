@@ -37,19 +37,6 @@ const Hero = ({ data }: HeroProps) => {
           <p className="text-2xl font-light text-gray-400">{data.title}</p>
           <p className="max-w-[45ch] text-lg text-gray-400">{data.bio}</p>
 
-          {/* Action Buttons */}
-          <div className="mt-4 flex gap-4">
-            <Link
-              href="/anil-oli-resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex cursor-pointer items-center gap-2 rounded bg-blue-600 px-6 py-2 text-white transition-all duration-200 hover:bg-blue-700"
-            >
-              <BiDownload className="text-xl" />
-              Get Resume
-            </Link>
-          </div>
-
           {/*Social Media Links  */}
           <div className="mt-8 flex gap-2">
             {data.socials.map((social) => (
