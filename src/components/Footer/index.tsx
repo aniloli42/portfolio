@@ -6,8 +6,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaGlobe,
-  FaEnvelope,
-  FaPhone
+  FaEnvelope
 } from 'react-icons/fa'
 import Link from 'next/link'
 
