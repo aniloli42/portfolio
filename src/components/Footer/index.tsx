@@ -50,13 +50,6 @@ const Footer = ({ data }: FooterProps) => {
                   <FaEnvelope />
                   <span className="text-sm">{data.email}</span>
                 </a>
-                <a
-                  href={`tel:${data.phone}`}
-                  className="flex items-center gap-2 text-gray-400 transition-colors duration-150 hover:text-blue-400"
-                >
-                  <FaPhone />
-                  <span className="text-sm">{data.phone}</span>
-                </a>
               </div>
             </div>
 
