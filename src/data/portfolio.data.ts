@@ -107,7 +107,6 @@ export const portfolioData: PortfolioData = {
       ],
       repositoryUrl:
         "https://bitbucket.org/aniloli_codes/assignment-build-your-own-ai-assistant-main",
-      // liveUrl: add if you have a deployed demo
     },
     {
       title: "Institutional Notice Broadcasting Automated System",
@@ -123,6 +122,21 @@ export const portfolioData: PortfolioData = {
       repositoryUrl:
         "https://github.com/aniloli42/ctevt-notice-to-facebook-post-automation",
       liveUrl: "https://noticeapi.aniloli42.me",
+    },
+    {
+      title: "WeFind – Lost & Found Mobile Platform",
+      description:
+        "Built core features of a mobile lost & found platform as part of a 5-engineer Agile team, including authentication, protected routing, profile management, notifications, and GPS-prefilled item reporting.",
+      technologies: ["React Native", "Expo", "Supabase", "Google Maps API"],
+      repositoryUrl: "https://bitbucket.org/cs3398-ganymede-s26/cs3398_project",
+    },
+    {
+      title: "CareDevi – AI Healthcare Referral Platform",
+      description:
+        "Prototyped an AI-assisted platform during a healthcare hackathon that extracts information from clinical notes to recommend and track patient referrals.",
+      technologies: ["AI APIs", "Workflow Automation"],
+      repositoryUrl:
+        "https://github.com/arjungiri1234/hackathon-2026-projects-we-care",
     },
     {
       title: "Donate – Blood Management System",
