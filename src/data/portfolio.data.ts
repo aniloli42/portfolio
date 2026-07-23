@@ -56,10 +56,7 @@ export const portfolioData: PortfolioData = {
       location: "San Marcos, TX",
       startDate: "Aug 2024",
       endDate: "May 2028",
-      honors: [
-        "Dean's List (All terms)",
-        "Honors College Student",
-      ],
+      honors: ["Dean's List (All terms)", "Honors College Student"],
       gpa: "3.84/4.0",
     },
   ],
@@ -94,88 +91,88 @@ export const portfolioData: PortfolioData = {
   ],
 
   projects: [
-  {
-    title: "Enhanced RAG AI Assistant",
-    description:
-      "Enhanced a Retrieval-Augmented Generation (RAG) AI assistant as an Honors Contract project — improved retrieval quality with recursive, boundary-aware chunking, expanded ingestion to PDF, DOCX, and Markdown, and built a React chat interface backed by FastAPI with persistent conversation history.",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "React",
-      "PostgreSQL",
-      "Qdrant",
-      "LangChain",
-      "Google Gemini",
-      "Docker",
-    ],
-    repositoryUrl:
-      "https://bitbucket.org/aniloli_codes/assignment-build-your-own-ai-assistant-main",
-    // liveUrl: add if you have a deployed demo
-  },
-  {
-    title: "Institutional Notice Broadcasting Automated System",
-    description:
-      "Developed and deployed an automated system to streamline the extraction and posting of CTEVT notices, increasing Facebook page user engagement by 25% through timely content delivery.",
-    technologies: [
-      "Puppeteer.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Facebook Graph API",
-    ],
-    repositoryUrl:
-      "https://github.com/aniloli42/ctevt-notice-to-facebook-post-automation",
-    liveUrl: "https://noticeapi.aniloli42.me",
-  },
-  {
-    title: "Donate – Blood Management System",
-    description:
-      "Developed a full-stack blood donation management system using the MERN stack, self-learning technologies during the project.",
-    technologies: [
-      "MongoDB",
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "Redux",
-      "CSS3",
-    ],
-    repositoryUrl:
-      "https://github.com/aniloli42/donate-blood-management-mern",
-    liveUrl: "https://donate.aniloli42.me",
-  },
-],
+    {
+      title: "Enhanced RAG AI Assistant",
+      description:
+        "Enhanced a Retrieval-Augmented Generation (RAG) AI assistant as an Honors Contract project — improved retrieval quality with recursive, boundary-aware chunking, expanded ingestion to PDF, DOCX, and Markdown, and built a React chat interface backed by FastAPI with persistent conversation history.",
+      technologies: [
+        "Python",
+        "FastAPI",
+        "React",
+        "PostgreSQL",
+        "Qdrant",
+        "LangChain",
+        "Google Gemini",
+        "Docker",
+      ],
+      repositoryUrl:
+        "https://bitbucket.org/aniloli_codes/assignment-build-your-own-ai-assistant-main",
+      // liveUrl: add if you have a deployed demo
+    },
+    {
+      title: "Institutional Notice Broadcasting Automated System",
+      description:
+        "Developed and deployed an automated system to streamline the extraction and posting of CTEVT notices, increasing Facebook page user engagement by 25% through timely content delivery.",
+      technologies: [
+        "Puppeteer.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Facebook Graph API",
+      ],
+      repositoryUrl:
+        "https://github.com/aniloli42/ctevt-notice-to-facebook-post-automation",
+      liveUrl: "https://noticeapi.aniloli42.me",
+    },
+    {
+      title: "Donate – Blood Management System",
+      description:
+        "Developed a full-stack blood donation management system using the MERN stack, self-learning technologies during the project.",
+      technologies: [
+        "MongoDB",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "Redux",
+        "CSS3",
+      ],
+      repositoryUrl:
+        "https://github.com/aniloli42/donate-blood-management-mern",
+      liveUrl: "https://donate.aniloli42.me",
+    },
+  ],
 
-awards: [
-  {
-    title: "2nd Place — Business Solutions Using AI",
-    year: "2026",
-    issuer: "Midwest Collegiate Computing Conference (MWC3)",
-    type: "award",
-  },
-  {
-    title: "TXST Dean's List",
-    year: "All terms",
-    issuer: "Texas State University",
-    type: "award",
-  },
-  {
-    title: "Foundations of AI Engineering",
-    year: "2026",
-    issuer: "CodePath",
-    type: "certification",
-  },
-  {
-    title: "Generative AI: Prompt Engineering Basics",
-    year: "2025",
-    issuer: "IBM (via Coursera)",
-    type: "certification",
-  },
-  {
-    title: "Bobcat LEAD",
-    issuer: "Texas State University - Student Involvement and Engagement",
-    type: "certification",
-  },
-],
+  awards: [
+    {
+      title: "2nd Place — Business Solutions Using AI",
+      year: "2026",
+      issuer: "Midwest Collegiate Computing Conference (MWC3)",
+      type: "award",
+    },
+    {
+      title: "TXST Dean's List",
+      year: "All terms",
+      issuer: "Texas State University",
+      type: "award",
+    },
+    {
+      title: "Foundations of AI Engineering",
+      year: "2026",
+      issuer: "CodePath",
+      type: "certification",
+    },
+    {
+      title: "Generative AI: Prompt Engineering Basics",
+      year: "2025",
+      issuer: "IBM (via Coursera)",
+      type: "certification",
+    },
+    {
+      title: "Bobcat LEAD",
+      issuer: "Texas State University - Student Involvement and Engagement",
+      type: "certification",
+    },
+  ],
 
   communityInvolvement: [
     {
